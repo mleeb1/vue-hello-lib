@@ -1,10 +1,19 @@
 {
-  "name": "vue-hello-lib",
+  "name": "@mleeb/vue-hello-lib",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": "./dist/vue-hello-lib.common.js",
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build-lib": "vue-cli-service build --target lib --name vue-hello-lib ./src/components/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
