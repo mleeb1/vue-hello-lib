@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>vue-hello-lib demo</title>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="./vue-hello-lib.umd.js"></script>
+
+<link rel="stylesheet" href="./vue-hello-lib.css">
+
+<body>
+
+    <div id="app">
+        <h1>{{ message }}</h1>
+        <hello-world msg="Welcome to Your Vue.js App"/>
+      </div>
+
+    <script>
+    
+    //Vue.component('HelloWorld', require('./vue-hello-lib')); //component name should be in camel-case
+
+    var myObject = new Vue({
+        el: '#app',
+        data: {message: 'Hello Vue!'},
+        // components: {
+        //     HelloWorld
+        // }
+    })
+
+    //console.log(vue-hello-lib)
+
+    </script>
+
+</body>
+</html>
